@@ -71,7 +71,7 @@ export class MyApp {
 }
 ```
 
- Anda mungkin bertanya, mengapa kita set rootPage menjadi string?
+Anda mungkin bertanya, mengapa kita set rootPage menjadi string?
 
 Inilah yang di sebut Ionic lazy loading.
 
@@ -124,4 +124,97 @@ Sekarang tab sudah mempunyai page yang sudah di assign, dan kita lihat  view Tab
 Untuk dapat menavigasi pages yang berbeda kita tambahkan 2 buttton pada view **FilmsPage**.
 
 ### Using the NavController
- 	
+
+Buka file **src/pages/films-page/films-page.html** dan ganti dengan kode berikut:
+
+```html
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Films</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+  <button ion-button full (click)="openDetails()">Go to Details</button>
+  <button ion-button full (click)="goToPlanets()">Switch to Planets</button>
+</ion-content>
+``` 	
+
+Buka file **src/pages/films-page/films.ts** dan ganti dengan kode berikut:
+
+```javascript
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+ 
+@IonicPage()
+@Component({
+  selector: 'page-films-page',
+  templateUrl: 'films-page.html',
+})
+export class FilmsPage {
+ 
+  constructor(public navCtrl: NavController, public navParams: NavParams) { }
+ 
+  openDetails() {
+    this.navCtrl.push('FilmDetailsPage');
+  }
+ 
+  goToPlanets() {
+    this.navCtrl.parent.select(2);
+  }
+}
+```
+
+Applikasi saat ini akan menjadi seperti ini:
+
+![navigation](https://i0.wp.com/ionicacademy.com/wp-content/uploads/2017/05/crashcourse-ionic-push.gif?resize=370%2C185&ssl=1)
+
+### Passing Parameters
+
+Kita akan melewatkan sebuah parameter pada page yang dituju. Buka file **films.ts** dan tambahkan kode berikut pada function push:
+
+```javascript
+this.navCtrl.push('FilmDetailsPage', {filmId: 2});
+```
+
+Parameter `filmId` akan di tampilkan pada page film detail.
+
+Buka file **src/pages/film-details-page/film-details-page.ts** dan ganti kodenya dengan kode berikut:
+
+```javascript
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+ 
+@IonicPage()
+@Component({
+  selector: 'page-film-details-page',
+  templateUrl: 'film-details-page.html',
+})
+export class FilmDetailsPage {
+  filmId = null;
+ 
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.filmId = this.navParams.get('filmId');
+  }
+ 
+  goBack() {
+    this.navCtrl.pop();
+  }
+ 
+}
+```
+
+Tampilkan parameter pada view. Buka file **src/pages/film-details-page/film-details-page.html** dan ganti kodenya dengan kode berikut:
+
+```html
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Details</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+  Film ID: {{ filmId }}
+  <button ion-button full (click)="goBack()">Go Back!</button>
+</ion-content>
+```

@@ -180,6 +180,10 @@ Buka file **src/pages/film-details/film-details.html** dan ubah view untuk memba
 </ion-content>
 ```
 
+Saat ini aplikasi akan menjadi seperti berikut ini:
+
+![Swapi](https://i1.wp.com/ionicacademy.com/wp-content/uploads/2017/05/crashcourse-ionic-list.gif?resize=370%2C404&ssl=1)
+
 ## 3. Using Providers
 
 Provider merupakan sebuah component Angular yang dapat di **inject** kedalam page lain yang mana memungkinkan kita untuk memanggil beberapa function.

@@ -201,7 +201,7 @@ ionic g provider api
 Ini akan membuat sebuah file baru **src/providers**, dan kita pastikan juga provider yang baru saja kita buat di tambahkan pada array dalam **src/app/app.module.ts**.
 
 ```javascript
-import { Api } from './../providers/api/api';
+import { Api } from './../providers/api';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';

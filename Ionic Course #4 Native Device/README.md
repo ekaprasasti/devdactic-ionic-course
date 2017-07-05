@@ -137,7 +137,7 @@ Pada browser akan muncul error seperti ini:
 
 Jika kita ingin mengetest fungsi ini kita harus **mendeploy** aplikasi kita pada simulator atau device fisik.
 
-Ketika kita sudah deploye dan menggunakan fungsi share, kita akan mendapatkan native email client seperti berikut:
+Ketika kita sudah deploy dan menggunakan fungsi share, kita akan mendapatkan native email client seperti berikut:
 
 ![native email client](https://i1.wp.com/ionicacademy.com/wp-content/uploads/2017/05/ionic-crash-course-cordova-email.png?w=468&ssl=1)
 

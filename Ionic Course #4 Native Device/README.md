@@ -131,6 +131,10 @@ Untuk properties dan function di atas dan yang tersedia pada plugin, kita bisa m
 
 ### Plugin cordova tidak dapat bekerja pada browser
 
+Pada browser akan muncul error seperti ini:
+
+![browser error](https://i1.wp.com/ionicacademy.com/wp-content/uploads/2017/05/ionic-crash-course-cordova-warning.png?w=1020&ssl=1)
+
 Jika kita ingin mengetest fungsi ini kita harus **mendeploy** aplikasi kita pada simulator atau device fisik.
 
 Ketika kita sudah deploye dan menggunakan fungsi share, kita akan mendapatkan native email client seperti berikut:

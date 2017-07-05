@@ -1,6 +1,6 @@
 # Bagaimana Menggunakan Cordova dan Device Feature pada Ionic
 
-Untuk tutorial dari devadactic.com bisa di lihat [di sini](ihttps://ionicacademy.com/cordova-features-inside-ionic/). Saat ini aplikasi Ionic kita hanya berjalan di dalam webview, kita butuh suatu akses ke fitur device seperti kamera atau gyroscope. 
+Untuk tutorial dari devadactic.com bisa di lihat [di sini](https://ionicacademy.com/cordova-features-inside-ionic/). Saat ini aplikasi Ionic kita hanya berjalan di dalam webview, kita butuh suatu akses ke fitur device seperti kamera atau gyroscope. 
 
 ## 1. Apa itu plugin cordova?
 

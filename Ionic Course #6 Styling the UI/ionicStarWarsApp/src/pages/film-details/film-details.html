@@ -1,0 +1,29 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title>{{ film.title }}</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only color="secondary"  (click)="unfavoriteFilm()" *ngIf="isFavorite"><ion-icon name="star"></ion-icon></button>
+			<button ion-button icon-only color="secondary"  (click)="favoriteFilm()" *ngIf="!isFavorite"><ion-icon name="star-outline"></ion-icon></button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card class="movie-card">
+		<ion-card-content>
+			{{ film.opening_crawl }}
+		</ion-card-content>
+	
+		<ion-item class="movie-info">
+			<ion-icon name="film" item-left></ion-icon>
+			Director: {{ film.director }}
+		</ion-item>
+
+		<ion-item class="movie-info">
+			<ion-icon name="calendar" item-left></ion-icon>
+			Release Date: {{ film.release_date | date}}
+		</ion-item>
+	</ion-card>
+
+	<button ion-button full (click)="shareFilm()">Share by Email</button>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title>{{ film.title }}</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="unfavoriteFilm()" *ngIf="isFavorite"><ion-icon name="star"></ion-icon></button>
+			<button ion-button icon-only (click)="favoriteFilm()" *ngIf="!isFavorite"><ion-icon name="star-outline"></ion-icon></button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card>
+		<ion-card-content>
+			{{ film.opening_crawl }}
+		</ion-card-content>
+	</ion-card>
+
+	<button ion-button full (click)="shareFilm()">Share by Email</button>
+</ion-content>

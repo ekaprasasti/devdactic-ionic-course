@@ -83,4 +83,4 @@ Sekarang kita telah mempelajari dasar dari:
 3. Cordova Plugins
 4. Data storage
 5. Styling & Theming
-6 . Debugging
+6. Debugging
